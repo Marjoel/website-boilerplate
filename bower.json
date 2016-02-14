@@ -1,0 +1,8 @@
+{
+	"name": "website-boilerplate",
+	"version": "0.0.0",
+	"private": true,
+	"dependencies": {
+		"sanitize-css": "~3.0.0"
+	}
+}

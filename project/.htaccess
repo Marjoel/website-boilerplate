@@ -1,0 +1,22 @@
+# rewrite from website.com to www.example.com
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+	RewriteCond %{HTTP_HOST} ^website.com [NC]
+	RewriteRule ^(.*)$ http://www.website.com/$1 [r=301,NC]
+</IfModule>
+
+# compress the files before sending to browser
+<ifmodule mod_deflate.c>
+	AddOutputFilterByType DEFLATE text/text text/html text/plain text/xml text/css application/x-javascript application/javascript text/javascript font/opentype font/truetype application/x-font-ttf application/x-font-woff 
+</ifmodule>
+
+# set expires date to files
+<FilesMatch "(?i)^.*\.(ico|flv|jpg|jpeg|png|gif|js|css|ttf|woff|woff2|html)$">
+	ExpiresActive On
+	ExpiresDefault A2592000
+</FilesMatch>
+
+# block access to directories
+<IfModule mod_autoindex.c>
+    Options -Indexes
+</IfModule>
