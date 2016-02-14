@@ -106,6 +106,7 @@ Grunt `/tasks`:
 
 ## You should to read this
 
+* When you create another `.html` file, add it on `/task/htmlmin.js`
 * When you use any js component on `bower`, add it on `/task/uglify.js`
 * When you use any css component on `bower`, add it on `/task/less.js`
 * When you use any css class that is added on html through  js, add the `.js` file on `/task/purifycss.js`
