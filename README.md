@@ -1,5 +1,7 @@
 # Website's boilerplate
 
+A website's boilerplate using grunt, bower and less.
+
 ## Dependencies
 
 1. Install [Git](http://git-scm.com/download/), if you don't have it yet.
