@@ -104,7 +104,7 @@ Grunt `/tasks`:
 * `grunt-contrib-watch`: watch for modifications on `.css`, `.js` and `.html`
 * `grunt-concurrent`: start more than one watch per time
 
-## You should to read this
+## You should read this
 
 * When you create another `.html` file, add it on `/task/htmlmin.js`
 * When you use any js component on `bower`, add it on `/task/uglify.js`
