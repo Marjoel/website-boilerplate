@@ -37,7 +37,7 @@ You should to put your Google Analytics ID in `/project/assets/js/analytics.js`
 var gaId = 'UA-XXXXXXXX-X'; // change 'UA-XXXXXXXX-X' for your Google Analytics ID
 ```
 
-You should to put website on in `/project/.htaccess`, change `website` to your website
+You should to put your website name in `/project/.htaccess`, change `website` to your website
 
 ```js
 RewriteCond %{HTTP_HOST} ^website.com [NC]
