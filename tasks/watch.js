@@ -2,8 +2,8 @@ module.exports = function(grunt) {
     'use strict';
 
 	grunt.config('watch', {
-		index: {
-			files: ['project/index.html'],
+		views: {
+			files: ['project/*.html'],
 			tasks: ['copy:build',
 					'less:build',
 					'purifycss:build',
@@ -25,7 +25,7 @@ module.exports = function(grunt) {
 		},
 		scripts: {
 			files: ['project/assets/js/*.js'],
-			tasks: ['uglify:build'],
+			tasks: ['uglify:scripts'],
 			options: {
 				nospawn: true
 			}

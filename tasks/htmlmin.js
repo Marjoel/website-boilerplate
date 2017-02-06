@@ -7,9 +7,12 @@ module.exports = function(grunt) {
                 removeComments: true,
                 collapseWhitespace: true
             },
-			files: {
-				'dist/index.html': 'dist/index.html'
-		  }
+			files: [{
+                expand: true,
+                cwd: 'dist/',
+                src: ['*.html'],
+                dest: 'dist/'
+            }]
 		}
     });
     grunt.loadNpmTasks('grunt-contrib-htmlmin');

@@ -3,24 +3,44 @@ module.exports = function(grunt) {
 	
     grunt.loadTasks('./tasks');
 	
+	grunt.registerTask('styles', [
+		'less:build',
+		'purifycss:build',
+		'csscomb:build',
+		'cssmin:build' // using this because minify of purifycss is not working
+	]);
+
+	grunt.registerTask('scripts', [
+		'uglify:scripts',
+		'uglify:vendor'
+	]);
+
+	grunt.registerTask('views', [
+		'copy:build',
+		'htmlmin:build'
+	]);
+
+	grunt.registerTask('styles', [
+		'less:build',
+		'purifycss:build',
+		'csscomb:build',
+		'cssmin:build'
+	]);
+
 	grunt.registerTask('dev', [
 		'concurrent:dev'
 	]);
 	
-	grunt.registerTask('prod', [
+	grunt.registerTask('build', [
 		'clean:build',
-		'less:build',
-		'uglify:build',
-		'copy:build',
+		'views',
+		'scripts',
+		'styles',
 		'imagemin:build',
-		'htmlmin:build',
-		'purifycss:build', 
-		'csscomb:build',
-		'cssmin:build' // using this because minify of purifycss is not working
 	]);
 	
 	grunt.registerTask('start', [
-		'prod',
+		'build',
 		'connect:server:keepalive'
 	]);
 };

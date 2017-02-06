@@ -6,7 +6,7 @@ module.exports = function(grunt) {
 			logConcurrentOutput: true
 		},
 		dev: {
-			tasks: ['watch:styles', 'watch:scripts', 'watch:index']
+			tasks: ['watch:styles', 'watch:scripts', 'watch:views']
 		}
     });
     grunt.loadNpmTasks('grunt-concurrent');

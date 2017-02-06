@@ -4,7 +4,9 @@ module.exports = function(grunt) {
 	grunt.config('csscomb', {
     	build: {
 			files: {
-            	'dist/assets/css/styles.min.css': ['dist/assets/css/styles.min.css']
+            	'dist/assets/css/styles.min.css': [
+					'dist/assets/css/styles.min.css'
+				]
             }
 		}
     });

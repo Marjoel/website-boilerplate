@@ -6,8 +6,7 @@ module.exports = function(grunt) {
 			options: {
 				optimizationLevel: 7
 			},
-			files: [
-				{
+			files: [{
 					expand: true,
 					cwd: 'project/assets/images/', 
 					src: ['*.{png,jpg,gif,svg}'],
